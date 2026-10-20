@@ -10,7 +10,117 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
+    <style id="mobile-fix">
+@supports (height: 100dvh) {
+    .greeting-card {
+        max-height: 85dvh;
+    }
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 680px) {
+    /* ---------- 0. Lời dẫn giữa màn hình: thu hẹp để không chạm cột nút bên phải ---------- */
+    .intro-prompt {
+        width: calc(100% - 112px);
+    }
+    .intro-prompt h1 {
+        font-size: 1.55rem;
+        line-height: 1.25;
+    }
+    .intro-prompt p {
+        font-size: 0.85rem;
+    }
+    /* ---------- 1. Góc trên trái: tiêu đề + badge ---------- */
+    .top-left-area {
+        top: max(12px, env(safe-area-inset-top, 12px));
+        left: max(12px, env(safe-area-inset-left, 12px));
+        /* chừa chỗ cho cột nút bên phải (38px nút + 12px lề + 10px đệm) */
+        max-width: calc(100vw - 76px);
+        gap: 5px;
+    }
+    .top-left-brand {
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+    .visitor-badge {
+        max-width: 100%;
+        font-size: 0.66rem;
+        padding: 4px 9px;
+        gap: 5px;
+        white-space: nowrap;
+    }
+    /* ---------- 2. Góc trên phải: xếp DỌC để không đè lên tiêu đề ---------- */
+    .top-right-bar {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+        top: max(12px, env(safe-area-inset-top, 12px));
+        right: max(12px, env(safe-area-inset-right, 12px));
+    }
+    /* 4 nút cùng một kích thước tròn, đều nhau */
+    .top-right-bar .icon-btn {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        padding: 0;
+        border-radius: 50%;
+    }
+    /* ---------- 3. Dải nút dưới cùng: 3 nút vừa 1 hàng, không bị cắt ---------- */
+    .bottom-controls {
+        width: calc(100% - 24px);
+        max-width: 460px;
+        gap: 6px;
+        bottom: max(16px, env(safe-area-inset-bottom, 16px));
+    }
+    .glass-btn {
+        flex: 1 1 0;
+        min-width: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+        padding: 8px 6px;
+        border-radius: 18px;
+        font-size: 0.72rem;
+        line-height: 1.2;
+        text-align: center;
+        white-space: normal;
+    }
+    /* ---------- 4. Dòng chữ phụ phía dưới: cho xuống dòng thay vì bị cắt "..." ---------- */
+    .subtitle-bottom {
+        width: calc(100% - 28px);
+        max-width: 460px;
+        white-space: normal;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.35;
+        padding: 8px 16px;
+        border-radius: 20px;
+    }
+    /* ---------- 5. Form viết thư: cỡ chữ >= 16px để iOS không tự zoom khi bấm ô nhập ---------- */
+    .compose-form input,
+    .compose-form textarea,
+    .compose-form select {
+        font-size: 16px;
+    }
+}
+
+
+/* Màn hình rất nhỏ (iPhone SE, máy 320px) */
+
+@media (max-width: 360px) {
+    .top-left-brand {
+        font-size: 0.92rem;
+    }
+    .glass-btn {
+        font-size: 0.68rem;
+        padding: 8px 4px;
+    }
+}
+    </style>
 </head>
 
 <body>
@@ -171,9 +281,9 @@
 
     <canvas id="gardenCanvas"></canvas>
 
-    <script src="garden-botany.js?v=5"></script>
-    <script src="card.js?v=5"></script>
-    <script src="script.js?v=5"></script>
+    <script src="garden-botany.js?v=7"></script>
+    <script src="card.js?v=7"></script>
+    <script src="script.js?v=7"></script>
 </body>
 
 </html>
