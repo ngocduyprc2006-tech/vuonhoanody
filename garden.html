@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer">
+    <title>Vườn Hoa Tháng Mười - 20/10 Ngọt Ngào</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+
+<body>
+
+    <div class="top-left-area">
+        <div class="top-left-brand">Tháng Mười Dịu Dàng ♡ 20/10</div>
+        <div class="visitor-badge" title="Số liệu thống kê thực tế bắt đầu từ 0">
+            <span class="pulse-dot"></span>
+            <span>Đang online: <strong id="onlineNowCount">1</strong></span>
+            <span class="badge-sep">|</span>
+            <span>Tổng lượt ghé: <strong id="visitorCount">0</strong></span>
+        </div>
+    </div>
+
+    <div class="top-right-bar">
+        <button type="button" class="icon-btn primary-glow" id="openComposeBtn" title="Tự tay viết thư và tạo link gửi tặng">
+      <span>✍️</span> <span class="btn-text-label">Viết Thư Gửi Tặng</span>
+    </button>
+        <button type="button" class="icon-btn" id="openCardDirectBtn" title="Mở đọc bức thư">
+      <span>💌</span> <span class="btn-text-label">Mở Thư</span>
+    </button>
+        <button type="button" class="icon-btn circle" id="fxToggleBtn" title="Bật/Tắt Hiệu Ứng (Cho máy yếu)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+    </button>
+        <button type="button" class="icon-btn circle" id="themeToggleBtn" title="Đổi Ban Ngày / Đêm Sao Băng">
+      <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
+    </div>
+
+    <div class="intro-prompt" id="introPrompt">
+        <h1 id="introMainTitle">Từ một nhành hoa nhỏ...</h1>
+        <p id="introSubText">Chạm nhẹ vào hoa để đánh thức cả khu vườn rực rỡ sắc màu</p>
+    </div>
+
+    <div class="subtitle-bottom" id="subtitleBottom">
+        Từ một nhành hoa nhỏ, cả khu vườn đang thức giấc vì bạn...
+    </div>
+
+    <div class="floating-words-container" id="floatingWordsContainer"></div>
+
+    <!-- Cửa sổ đọc thư -->
+    <div class="card-overlay" id="cardOverlay">
+        <div class="greeting-card custom-scroll">
+            <button type="button" class="close-card-btn" id="closeCardBtn" title="Đóng lá thư">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+            <div class="card-badge-tag">Ngày 20 Tháng 10 Dịu Dàng</div>
+            <div class="card-dear" id="displayDear">Gửi những đóa hoa xinh đẹp nhất giữa đời thường,</div>
+            <h2 class="card-title" id="displayTitle">Mong Mọi Điều Đẹp Đẽ Luôn Nở Rộ Bên Bạn</h2>
+            <div class="card-divider"></div>
+
+            <div class="card-body-container" id="displayBodyContainer">
+                <p class="card-body">Một nhành hoa nhỏ có thể làm bừng sáng cả góc trời thu, còn nụ cười và sự dịu dàng của phái đẹp lại khiến cả thế gian này trở nên ấm áp, bình yên hơn biết bao nhiêu.</p>
+                <p class="card-body">Giữa những nhịp sống vội vã thường ngày, mong rằng hôm nay và cả những tháng ngày về sau, mỗi cô gái, mỗi người mẹ, mỗi người chị đều tìm thấy cho riêng mình những khoảng lặng thật êm đềm. Chúc bạn luôn đủ bình yên để tận hưởng những niềm
+                    vui giản dị, đủ rạng rỡ để đi qua mọi ngày nắng mưa và đủ tự tin để theo đuổi những giấc mơ của chính mình.</p>
+                <p class="card-body">Hãy luôn yêu thương bản thân, luôn giữ ánh mắt trong veo và nụ cười tươi tắn trên môi. Bởi vì sự hiện diện của bạn chính là điều ngọt ngào và tuyệt vời nhất của cuộc đời này.</p>
+            </div>
+
+            <div class="card-sign" id="displaySign">Gửi ngàn hương sắc và những điều ngọt ngào nhất ♡</div>
+
+            <div class="card-footer-actions">
+                <button type="button" class="btn-card-action secondary" id="btnViewGarden">🌸 Ngắm vườn hoa</button>
+                <button type="button" class="btn-card-action primary" id="btnSwitchToCompose">✍️ Tự viết thư gửi người thương</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cửa sổ tự viết thư (Hoàn toàn trống để tự viết, chỉ có gợi ý mờ) -->
+    <div class="card-overlay" id="composeOverlay">
+        <div class="greeting-card compose-modal custom-scroll">
+            <button type="button" class="close-card-btn" id="closeComposeBtn" title="Đóng cửa sổ viết thư">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+            <h2 class="compose-heading">✍️ Tự Tay Viết Thư 20/10</h2>
+            <p class="compose-sub">Các ô dưới đây hoàn toàn trống để bạn tự viết theo cảm xúc riêng. Bấm vào các nút chủ đề để xem gợi ý ý tưởng nhẹ nhàng nhé:</p>
+
+            <div class="preset-group">
+                <div class="preset-buttons">
+                    <button type="button" class="preset-chip active" data-hint="mom">🌷 Gợi ý viết cho Mẹ</button>
+                    <button type="button" class="preset-chip" data-hint="lover">💖 Gợi ý cho Người yêu / Vợ</button>
+                    <button type="button" class="preset-chip" data-hint="crush">✨ Gợi ý cho Crush / Bạn nữ</button>
+                    <button type="button" class="preset-chip" data-hint="sister">🌸 Gợi ý cho Chị / Em gái</button>
+                </div>
+                <div class="hint-preview-box" id="hintPreviewBox">
+                    💡 <strong>Gợi ý nhẹ:</strong> Bạn có thể nhắc về những bữa cơm ấm áp của Mẹ, cảm ơn Mẹ vì những hy sinh thầm lặng và chúc Mẹ luôn khỏe mạnh, an yên mỗi ngày...
+                </div>
+            </div>
+
+            <form id="customLetterForm" class="compose-form" autocomplete="off">
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="inputRecipient">Lời mở đầu (Gửi đến ai):</label>
+                        <input type="text" id="inputRecipient" value="" autocomplete="off" placeholder="Gợi ý: Gửi Mẹ yêu của con," maxlength="90" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTitle">Tiêu đề bức thư:</label>
+                        <input type="text" id="inputTitle" value="" autocomplete="off" placeholder="Gợi ý: Mong Mẹ Luôn Bình Yên" maxlength="100" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="label-with-counter">
+                        <label for="inputMessage">Tâm tình của bạn (Bạn tự gõ nội dung vào đây):</label>
+                        <span class="char-counter" id="charCounter">0 / 2500</span>
+                    </div>
+                    <textarea id="inputMessage" class="custom-scroll" rows="5" autocomplete="off" placeholder="Gợi ý: Nhân ngày 20/10, con chúc Mẹ luôn thật nhiều sức khỏe... (Hãy tự gõ câu chữ của riêng bạn vào đây nhé)" maxlength="2500" required></textarea>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label for="inputSender">Chữ ký / Lời kết của bạn:</label>
+                        <input type="text" id="inputSender" value="" autocomplete="off" placeholder="Gợi ý: Con của Mẹ ♡" maxlength="90" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputTheme">Khung cảnh khi người ấy mở link:</label>
+                        <select id="inputTheme">
+              <option value="light">☀️ Ban ngày (Bầu trời Xanh Lam mix Hồng & Đàn bướm)</option>
+              <option value="dark">🌠 Ban đêm (Đêm Xanh Lam mix Hồng, Sao băng & Đom đóm)</option>
+            </select>
+                    </div>
+                </div>
+
+                <div class="compose-actions">
+                    <button type="button" class="btn-card-action secondary" id="btnClearForm">🔄 Làm trống ô</button>
+                    <button type="button" class="btn-card-action secondary" id="btnPreviewLetter">👁️ Xem Trước Thư</button>
+                    <button type="submit" class="btn-card-action primary" id="btnGenerateShareLink">🔗 Lưu & Tạo Link Gửi Tặng</button>
+                </div>
+            </form>
+
+            <div class="share-result-box" id="shareResultBox">
+                <div class="share-result-title">🎉 Link thư riêng của bạn đã tạo xong! Hãy sao chép gửi cho người nhận:</div>
+                <div class="share-url-row">
+                    <input type="text" id="generatedShareUrl" readonly>
+                    <button type="button" id="btnCopyShareUrl">Sao chép Link</button>
+                </div>
+                <p class="share-note">💡 Khi người nhận mở link này trên điện thoại hoặc máy tính, khu vườn sẽ nở rộ kèm đúng bức thư bạn vừa tự tay viết!</p>
+            </div>
+
+            <div class="saved-history-section">
+                <div class="saved-history-header">
+                    <span>📚 Thư bạn đã tự viết & lưu trên máy này (<span id="savedCountLabel">0</span>)</span>
+                    <button type="button" class="clear-history-btn" id="btnClearSaved">Xóa lịch sử</button>
+                </div>
+                <div class="saved-list custom-scroll" id="savedLettersList"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-controls" id="bottomControls">
+        <button type="button" class="glass-btn" id="btnReadAgain"><span>💌</span> Xem lại thư</button>
+        <button type="button" class="glass-btn" id="btnBottomCompose"><span>✍️</span> Viết thư gửi tặng</button>
+        <button type="button" class="glass-btn" id="btnReplayBloom"><span>🌸</span> Cho hoa nở lại</button>
+    </div>
+
+    <div class="toast-notification" id="toastNotify">Đã sao chép đường link thành công!</div>
+
+    <canvas id="gardenCanvas"></canvas>
+
+    <script src="garden-botany.js?v=5"></script>
+    <script src="card.js?v=5"></script>
+    <script src="script.js?v=5"></script>
+</body>
+
+</html>
